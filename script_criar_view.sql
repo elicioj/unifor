@@ -2,8 +2,10 @@ CREATE OR replace VIEW vw_dados_aluno
 AS
   SELECT a.nu_codaluno        CODIGO_ALUNO,
          a.nm_aluno           NOME_ALUNO,
+         to_char(a.dt_matricula,'yyyy') ANO_MATRICULA,
          a.nu_codcurso        CODIGO_CURSO,
          c.nm_curso           NOME_CURSO,
+         c.nu_cota            COTA,
          a.nu_codregiao       CODIGO_REGIAO,
          r.nm_regiao          NOME_REGIAO,
          cdt.nu_coddisciplina CODIGO_DISCIPLINA, 
